@@ -44,8 +44,8 @@ def google_image_results_parser(code):
                    'result_qty':[]}
 
     # Links for all the search results
-    for li in soup.findAll('li', attrs={'class':'g'}):
-        sLink = li.find('a')
+    for div in soup.findAll('div', attrs={'class':'g'}):
+        sLink = div.find('a')
         whole_array['links'].append(sLink['href'])
 
     # Search Result Description
